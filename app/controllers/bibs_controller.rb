@@ -1,10 +1,10 @@
 class BibsController < ApplicationController
   def index
-    @bibs = Bibs.all
+    @bibs = Bib.all
   end
 
   def show
-    @bib = Bibs.find(params[:id])
+    @bib = Bib.find(params[:id])
   end
 
   def new
