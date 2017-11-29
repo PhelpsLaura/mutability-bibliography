@@ -1,6 +1,6 @@
 class BibsController < ApplicationController
   def index
-    @bibs = Bib.all
+    redirect_to bib_path(1)
   end
 
   def show
