@@ -21,11 +21,11 @@ class BibsController < ApplicationController
   end
 
   def edit
-    @bib = Bib.find(params[:id])
+    @bib = Bib.find(1)
   end
 
   def update
-    @bib = Bib.find(params[:id])
+    @bib = Bib.find(1)
     if @bib.update(bib_params)
       redirect_to bib_path(@bib)
     else
