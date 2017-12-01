@@ -1,10 +1,12 @@
 class BibsController < ApplicationController
+
   def index
     redirect_to bib_path(1)
   end
 
   def show
     @bib = Bib.find(params[:id])
+    @display = Bib.get_partials
   end
 
   def new
