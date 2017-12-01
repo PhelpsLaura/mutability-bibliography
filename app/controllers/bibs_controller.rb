@@ -49,7 +49,7 @@ class BibsController < ApplicationController
 
     def get_partials
       @bib = Bib.find(params[:id])
-      arr = @bib.options.scan(/title|date|publisher|pagination|format|notes|reviews|/ix)
+      arr = @bib.options.scan(/title|date|publisher|pagination|format|notes|reviews/i)
       return arr
     end
 
