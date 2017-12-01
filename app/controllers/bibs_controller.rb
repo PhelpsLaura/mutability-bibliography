@@ -6,7 +6,7 @@ class BibsController < ApplicationController
 
   def show
     @bib = Bib.find(params[:id])
-    @display = Bib.get_partials(@bib)
+    @display = get_partials(@bib)
   end
 
   def new
@@ -52,5 +52,5 @@ class BibsController < ApplicationController
       arr = @bib.options.scan(/hello|world/ix)
       return arr
     end
-    
+
 end
