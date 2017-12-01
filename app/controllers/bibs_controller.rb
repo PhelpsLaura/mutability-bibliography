@@ -6,7 +6,7 @@ class BibsController < ApplicationController
 
   def show
     @bib = Bib.find(params[:id])
-    @display = get_partials(@bib)
+    @display = get_partials
   end
 
   def new
