@@ -5,7 +5,7 @@ module BibsHelper
     #/i makes the regex match case insensitive.
   def get_partials
     @bib = Bib.find(params[:id])
-    arr = @bib.options.scan(/(hello|world|)/x/i//)
+    arr = @bib.options.scan(/(hello|world|)/x/i/)
     return arr
   end
 end
