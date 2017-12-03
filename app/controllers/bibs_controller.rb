@@ -50,7 +50,7 @@ class BibsController < ApplicationController
     def get_partials
       @bib = Bib.find(params[:id])
       large_arr = @bib.options.scan(/pagination|circulation/i)
-      small_arr = @bib.options.scan(/date|style|for|location|author/)
+      small_arr = @bib.options.scan(/date|style|for|location|author/i)
       hash = Hash.new{:big => large_arr, :small => small_arr}
       return hash
     end
