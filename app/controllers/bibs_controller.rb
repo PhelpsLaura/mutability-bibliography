@@ -51,7 +51,7 @@ class BibsController < ApplicationController
       @bib = Bib.find(params[:id])
       large_arr = @bib.options.scan(/pagination|circulation/i)
       small_arr = @bib.options.scan(/date|style|for|location|author/i)
-      hash = Hash.new{:big => large_arr, :small => small_arr}
+      hash = {:big => large_arr, :small => small_arr}
       return hash
     end
 
