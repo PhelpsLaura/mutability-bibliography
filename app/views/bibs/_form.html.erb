@@ -1,7 +1,9 @@
-<%= form_for @bib do |f| %>
-  <p><%= f.label :options %></p>
-  <p><%= f.text_area :options %></p>
+<div class="container">
+  <%= form_for @bib do |f| %>
+    <p><%= f.label :options %></p>
+    <p><%= f.text_area :options %></p>
 
-  <p><%= f.submit :class => "btn waves-effect teal darken-1"%></p>
+    <p><%= f.submit :class => "btn waves-effect light-green lighten-1"%></p>
 
-<%end%>
+  <%end%>
+</div>
