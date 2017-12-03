@@ -9,7 +9,7 @@
     <div class="section white">
       <div class="row container">
         <% @display[:small].each do |partial| %>
-          <%= render partial %>
+          <%= render partial.downcase %>
         <%end%>
       </div>
     </div>
@@ -22,7 +22,7 @@
   <!-- large partials render with own parallax container -->
   <% unless @display[:big].blank? %>
     <%@display[:big].each do |partial| %>
-      <%= render partial %>
+      <%= render partial.downcase %>
     <%end%>
   <%end%>
 
