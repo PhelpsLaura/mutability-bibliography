@@ -9,9 +9,10 @@
 
 <%= render 'form'%>
 
+</br></br>
+
 <div class="row">
-  <div class="col m3"></div>
-   <div class="col s12 m6">
+   <div class="col s12 m6 offset-m3">
     <div class = "card">
       <div class = "card-content">
         <p>Enter what you would like to know.</p>
@@ -31,9 +32,9 @@
         </div>
     </div>
   </div>
-  <div class="col m3"></div>
 </div>
 
 <script>
     $('ul.tabs').tabs();
+    $('ul.tabs').tabs('select_tab', 'pub');
 </script>
