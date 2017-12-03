@@ -1,8 +1,59 @@
-<h1> The Mutability of Human Life </h1>
-<h4> Or, Memoirs of Adelaide, Marchioness of Melville </h4>
-<p> You would like to display: <%= @bib.options %> </p>
-<p> We recognized: <%= @display %>
-<% @display.each do |partial| %>
-  <%= render partial %>
+<nav>
+  <h1> The Mutability of Human Life </h1>
+  <h4> Or, Memoirs of Adelaide, Marchioness of Melville </h4>
+</nav>
+
+<% unless @display.blank? %>
+  <div class="parallax-container">
+    <div class="parallax"><%=image_tag("vintage_bib", alt="Background Image of Vintage Paper")%></div>
+  </div>
+
+  <% unless @display[:small].blank? %>
+
+    <!-- render small partials in one parallax container-->
+    <div class="section white">
+      <div class="row container">
+        <% @display[:small].each do |partial| %>
+          <%= render partial %>
+        <%end%>
+      </div>
+    </div>
+
+    <div class="parallax-container">
+      <div class="parallax"><%=image_tag("vintage_bib", alt="Background Image of Vintage Paper")%></div>
+    </div>
+  <%end%>
+
+  <!-- large partials render with own parallax container -->
+  <% unless @display[:big].blank? %>
+    <%@display.each[:big] do |partial| %>
+      <%= render partial %>
+    <%end%>
+  <%end%>
+
 <%end%>
-<!--#TODO: Add non-optional source button thing here!!-->
+
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header">Sourced from:</div>
+    <div class="collapsible-body">
+      <span>Each volume sourced from Harvard University Houghton Library, accessed through Eighteenth Century Collection Online (ECCO)</span>
+      <p>Gale group access number per volume: </p>
+      <ul>
+        <li>Vol I: <b>CW110192464</b> </li>
+        <li>Vol II: <b>CW110192723</b> </li>
+        <li>Vol III: <b>CW110192997</b> </li>
+      </ul>
+      <p class="indigo-text indigo-lighten-2">Note: The following links require access to Eighteenth Century Collection Online</p>
+      <span><%= link_to "Vol I",
+          "http://find.galegroup.com/ecco/infomark.do?&source=gale&prodId=ECCO&userGroupName=swar94187&tabID=T001&docId=CW110192464&type=multipage&contentSet=ECCOArticles&version=1.0&docLevel=FASCIMILE",
+          :class => "btn btn-flat light-green lighten-1"%></span>
+      <span><%= link_to "Vol II",
+          "http://find.galegroup.com/ecco/infomark.do?&source=gale&prodId=ECCO&userGroupName=swar94187&tabID=T001&docId=CW110192723&type=multipage&contentSet=ECCOArticles&version=1.0&docLevel=FASCIMILE",
+          :class => "btn btn-flat light-green lighten-1"%></span>
+      <span><%= link_to "Vol III",
+          "http://find.galegroup.com/ecco/infomark.do?&source=gale&prodId=ECCO&userGroupName=swar94187&tabID=T001&docId=CW3310192997&type=multipage&contentSet=ECCOArticles&version=1.0&docLevel=FASCIMILE",
+          :class => "btn btn-flat light-green lighten-1"%></span>
+    </div>
+  </li>
+</ul>
