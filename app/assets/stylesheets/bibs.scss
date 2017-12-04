@@ -1,12 +1,18 @@
 // Place all the styles related to the Bibs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700');
+
 body{
   text-align: center;
   padding-top: none;
   margin-top: none;
   color: #3e2723;
   background-color: #fafafa;
+}
+
+h1{
+  font-family: 'Merriweather', serif;
 }
 
 a{
