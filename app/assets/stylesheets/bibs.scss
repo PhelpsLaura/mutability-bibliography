@@ -5,6 +5,8 @@ body{
   text-align: center;
   padding-top: none;
   margin-top: none;
+  @extend .brown-text, .text-lighten-1;
+  @extend .white;
 }
 
 a{
