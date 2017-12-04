@@ -2,28 +2,19 @@
 
 ####Descriptive Bibliography for *The Mutability of Human Life*
 
-Using Ruby 4.2.2, Rails 5.1.4
+In an attempt to make a more user-friendly bibliography, this web app allows the user to chose what information to display about the anonymous 1777 novel *The Mutability of Human Life; or, Memoirs of Adelaide, Marchioness of Melville*. Site uses parallax design and partial rendering to compartmentalize the information. (And because I wanted to play with parallax.)
 
-Database is postgresql
+#####Tools used
+* Using Ruby 4.2.2, Rails 5.1.4
 
-Using [Materialize](http://materializecss.com/about.html) gem for aesthetics, bells, and whistles.
+* Database is postgresql
 
-Things you may want to cover:
+* Using [Materialize](http://materializecss.com/about.html) gem for aesthetics, bells, and whistles.
 
-* Ruby version
+* Site is currently deployed [here](https://immense-sands-91976.herokuapp.com) via [Heroku](https://www.heroku.com/home)
 
-* System dependencies
+* Information on *The Mutability of Human Life* pulled from [Eighteenth Century Collection Online](https://www.gale.com/primary-sources/eighteenth-century-collections-online)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#####Class
+Project created for Swarthmore College Eng035, Rise of the Novel, taught by Professor Rachel Buurma
+[More fun](http://riseofthenovel.swarthmore.edu/)
